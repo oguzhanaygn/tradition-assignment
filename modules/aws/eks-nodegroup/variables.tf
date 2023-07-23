@@ -1,0 +1,11 @@
+variable "cluster_name" {}
+variable "node_group_name" {}
+variable "node_role_arn" {}
+variable "subnet_ids" {}
+variable "desired_size" {}
+variable "max_size" {}
+variable "min_size" {}
+variable "launch_template_id" {}
+variable "launch_template_version" {}
+variable "labels" {}
+variable "tags" {}

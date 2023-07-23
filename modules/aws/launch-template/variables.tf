@@ -1,0 +1,13 @@
+variable "name" {}
+variable "update_default_version" {}
+variable "instance_type" {}
+variable "key_name" {}
+variable "block_device_name" {}
+variable "vpc_security_group_ids" {}
+variable "volume_size" {}
+variable "ebs_optimized" {}
+variable "monitoring_enabled" {}
+variable "resources_to_tag" {}
+variable "tags" {}
+variable "user_data" {}
+variable "image_id" {}
