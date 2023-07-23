@@ -38,12 +38,22 @@ There are 40 resources in this infrastructure. Distribution of the resources are
 
 ## How it works 
 
+#### Plan
+
 `terraform plan` : Plan output of base network infrastructure
+
 `terraform plan -var 'task_one=true'` : Plan output of base network and task one infrastructures
+
 `terraform plan -var 'task_two=true'` : Plan output of base network and task two infrastructures
+
 `terraform plan -var 'task_one=true' -var 'task_two=true'` : Plan output of whole infrastructure
 
+#### Apply
+
 `terraform apply` : Application output of base network infrastructure
+
 `terraform apply -var 'task_one=true'` : Application output of base network and task one infrastructures
+
 `terraform apply -var 'task_two=true'` : Application output of base network and task two infrastructures
+
 `terraform apply -var 'task_one=true' -var 'task_two=true'` : Application output of whole infrastructure
