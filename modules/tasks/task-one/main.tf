@@ -1,5 +1,5 @@
 module "task-one-ssh-private-key" {
-  source = "../../aws/tls-private-key"
+  source = "../../extra-modules/tls-private-key"
 
   algorithm = var.ssh_key_algorithm
   rsa_bits  = var.ssh_key_rsa_bits

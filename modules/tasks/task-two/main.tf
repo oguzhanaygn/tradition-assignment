@@ -1,7 +1,7 @@
 // SSH Key Pair
 
 module "task-two-ssh-private-key" {
-  source = "../../aws/tls-private-key"
+  source = "../../extra-modules/tls-private-key"
 
   algorithm = var.ssh_key_algorithm
   rsa_bits  = var.ssh_key_rsa_bits
@@ -283,8 +283,10 @@ module "task-two-loadbalancer-security-group-egress-rule" {
 
 }
 
-resource "local_file" "service-yaml-sg-template" {
-  content  = templatefile("${path.module}/k8s-deployment-files/service.yaml.tpl", {
+module "service-yaml-sg-template" {
+  source = "../../extra-modules/local-file"
+
+  content  = templatefile("${path.module}/k8s-deployment-files/templates/service.yaml.tpl", {
         loadBalancer_sg_id = "${module.task-two-loadbalancer-security-group.security_group_id}"
     })
   filename = "${path.module}/k8s-deployment-files/service.yaml"

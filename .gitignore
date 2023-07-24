@@ -1,1 +1,5 @@
 .terraform
+*-key-pair.pem
+**/k8s-deployment-files/service.yaml
+terraform.tfstate
+terraform.tfstate.backup
