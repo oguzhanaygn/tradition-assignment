@@ -1,5 +1,4 @@
 .terraform
-.terraform.lock.hcl
 *-key-pair.pem
 **/k8s-deployment-files/service.yaml
 terraform.tfstate
