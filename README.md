@@ -63,6 +63,14 @@ There are 41 resources in this infrastructure. Distribution of the resources are
 In this setup, both `task_one` and `task_two` variables are predefined as `false`. So, we should overwrite them to create infrastructures. 
 If we want to create only the network infrastructure, we should run `terraform plan` and `terraform apply` without any parameters. Since our both infra variables are `false` predefinitively, task specific infrastructures will not be created.
 
+#### Preparation :
+aws-cli and terraform should be available,
+local versions : 
+aws-cli : aws-cli/2.11.2
+terraform : Terraform v1.4.6
+
+- `terraform init` should be ran to be able to pull provider dependencies. 
+
 #### Task one :
 To be able to create task one components, commands below should be ran;
 
