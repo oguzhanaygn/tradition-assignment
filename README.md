@@ -112,6 +112,10 @@ After this double-check, we can apply the k8s yamls to our infrastructure.
 
 - To test if task two infrastructure is working or not, we should go to EC2 - Load Balancers page in AWS console or simply run `kubectl get svc nginx-svc -n nginx-test` and copy the FQDN of Load Balancer, paste it to the browser and enter it. 
 
+- Additionally; We can even connect the instances with SSH connection with the private key named `test-task-two-key-pair.pem` created during `apply`. 
+
+`ssh -i test-task-two-key-pair.pem ec2-user@instance_public_ip`
+
 #### Deletion steps :
 
 - `kubectl delete -f modules/tasks/task-two/k8s-deployment-files/` : deletion of the deployment components.
